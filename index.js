@@ -10,9 +10,9 @@ const Users = require("./models/users");
 
 const users = [
   {
-    nombre: "NewUser_10_03_2023",
-    apellido: "Mei",
-    dni: "31155898",
+    nombre: "Leandro",
+    apellido: "Doliri",
+    dni: "12312312",
   },
 ];
 
@@ -31,26 +31,26 @@ const usersDB = getAllUsers()
   });
 
 // SAVE
-const userSave = async (users) => {
-  let newUser;
-  await users.map((user) => {
-    let addUser = new Users({
-      nombre: user.nombre,
-      apellido: user.apellido,
-      dni: user.dni,
-    });
+// const userSave = async (users) => {
+//   let newUser;
+//   await users.map((user) => {
+//     let addUser = new Users({
+//       nombre: user.nombre,
+//       apellido: user.apellido,
+//       dni: user.dni,
+//     });
 
-    newUser = addUser.save();
-  });
-  return newUser;
-};
-userSave(users)
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+//     newUser = addUser.save();
+//   });
+//   return newUser;
+// };
+// userSave(users)
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // Server
 
